@@ -23,8 +23,8 @@ Large: 1.8
 
 --- 02 COLORS
 
-- Primary: #202124
-- Tints:
+- Primary: #202124 #ffffff20
+- Tints: #9a031e #d1d1d1
 - Shades:
 - Accents:
 - Greys:
@@ -44,39 +44,91 @@ Medium: 11px
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Playfair Display', serif;
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Playfair Display", serif;
 }
 
-.hero-section{
-    max-width: 120rem;
-    padding: 4.8rem 0 9.6rem 0;
-    margin:0 auto;
-    background-color: #202124;
-    color: #ffffff;
+.hero-section {
+  padding: 4.8rem 0 9.6rem 0;
+  margin: 0 auto;
+  background-color: #202124;
+  color: #ffffff20;
+  background-image: linear-gradient(
+    to right,
+    hsla(212, 76%, 5%, 0.196) 0%,
+    hsla(212, 74%, 9%, 0.196) 10%,
+    hsla(213, 73%, 15%, 0.196) 20%,
+    hsla(213, 75%, 23%, 0.196) 30%,
+    hsla(213, 77%, 27%, 0.196) 40%,
+    hsla(213, 77%, 29%, 0.196) 50%,
+    hsla(213, 77%, 30%, 0.196) 60%,
+    hsla(213, 77%, 31%, 0.196) 70%,
+    hsla(213, 76%, 33%, 0.196) 80%,
+    hsla(213, 69%, 40%, 0.2) 90%,
+    hsla(213, 61%, 45%, 0.2) 100%
+  );
 }
-.hero-img{
-    aspect-ratio: 1 / 1;
-    width: 100%;
+.hero {
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9.6rem;
+  align-items: center;
 }
-.hero{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 2rem;
-    font-size: 1.6rem;
-    font-tran
+.heading-primary {
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  font-weight: 700;
+  font-size: 12rem;
+  margin-top: -7rem;
+  margin-bottom: 12rem;
+  /* font-style: italic;  maybe maybe*/
 }
-h1 {
-    font-size: 3.6rem;
-   
+.hero-description {
+  font-size: 2.3rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+  letter-spacing: 0.6px;
+  color: #d1d1d1;
+  font-weight: 600;
 }
-.hero-button{
-   text-decoration: none;
-   color: #ffffff;
-   
+.hero-img {
+  width: 100%;
+  aspect-ratio: 10/9;
+  height: auto;
+  border-radius: 2px;
+}
+/* ideja za sliku: ubaciti transition gdje se okrene slika za 90 stepeni,
+i takodje implement shadow box koji prati sliku */
+.hero-button {
+  text-decoration: none;
+  color: #202124;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem 2.7rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  background-color: #d1d1d1;
+}
+.button-primary {
+  background-color: #9a031e;
+  color: #d1d1d1;
+}
+.button-secondary {
+  border-color: #d1d1d1;
+}
+
+.button-margin-right {
+  margin-right: 1.6rem;
 }
