@@ -62,7 +62,7 @@ body {
   background-color: #202124;
   color: #ffffff20;
   background-image: linear-gradient(
-    to right,
+    to right top,
     hsla(212, 76%, 5%, 0.196) 0%,
     hsla(212, 74%, 9%, 0.196) 10%,
     hsla(213, 73%, 15%, 0.196) 20%,
@@ -92,7 +92,10 @@ body {
   font-size: 12rem;
   margin-top: -7rem;
   margin-bottom: 12rem;
-  /* font-style: italic;  maybe maybe*/
+  background-image: linear-gradient(45deg,#299be0, #b86ca0, #ef914e );
+  background-size: 100%;
+  background-clip: text;
+cursor:cell
 }
 .hero-description {
   font-size: 2.3rem;
@@ -131,4 +134,38 @@ i takodje implement shadow box koji prati sliku */
 
 .button-margin-right {
   margin-right: 1.6rem;
+}
+
+.divider{
+  margin: auto;
+}
+.image-div{
+  max-width: 100vw;
+  max-height: 90rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-img{
+  max-width: 100%;
+}
+.rectangle1{
+  display:inline-block;
+  background-color: aqua;
+  padding: 10px;
+  z-index: 2;
+  position: absolute;
+  bottom: -500px;
+}
+.first{
+  bottom:-500px;
+  left: 700px;
+}
+.second{
+  bottom:-500px;
+  left: 800px;
+}
+.thrids{
+  bottom:-500px;
+  left: 900px;
 }
