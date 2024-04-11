@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Portfolio</title>
+    <title>Eldar Jahic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,20 +17,17 @@
     />
   </head>
   <body>
-    <header class="header">
-      <a class="header-logo">
-        <img />
-      </a>
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li class="list-item">Contact</li>
-          <li class="list-item">About</li>
-          <li class="list-item">Not sure</li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="hero-section">
+    <div class="hero-and-nav">
+      <div class="nav-div">
+        <img src="hourglass.svg" class="logo" />
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li class="list-item">Portfolio</li>
+            <li class="list-item">About</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hero-section">
         <div class="hero">
           <div class="hero-text-box">
             <h1 class="heading-primary">&nbsp;Design and development</h1>
@@ -43,30 +40,31 @@
             >
             <a href="#" class="hero-button button-secondary">About</a>
           </div>
-          <div class="img-box">
-            <img src="Heropic.jpg" class="hero-img" />
-          </div>
         </div>
-      </section>
+      </div>
+    </div>
+    <main class="content-wrapper">
       <section class="divider-section">
         <div class="divider">here goes the divider</div>
       </section>
-      <section class="photo-section">
-        <div class="image-div">
-      <div class="box box1">content
-        <div class="hidden-div"></div>
-      </div>
-
-      <div class="box box2">content
-        <div class="hidden-div"></div>
-      </div>
-
-      <div class="box box3">content
-        <div class="hidden-div"></div>
-      </div>
-
+      <section class="about-section">
+        <div class="about-image-div">
+          <img src="IMG_4970.jpg" class="img-about" />
+        </div>
+        <div class="about-text">
+          <p class="about-name">eldar jahic</p>
+          <p class="about-description">
+            hey there, my name is Eldar Jahic, and I am the creator of this
+            website. It's made as a place where I can test out my little
+            creations, and tinker with different tools. Purpose of this is
+            ofcorse to expand my own knowledge, and share it with others,
+            therefore I will try and make everything you see here from scratch,
+            also including taking photo of myself and giving it the dollar bill
+            engraving pattern
+          </p>
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
