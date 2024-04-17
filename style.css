@@ -61,7 +61,7 @@ body {
   padding: 2rem 3rem;
   background-image: radial-gradient(
       circle at 29% center,
-      rgba(52, 58, 64, 0.497) 30%,
+      rgba(12, 12, 12, 0.497) 30%,
       #00000000 50%
     ),
     url(Rectangle.png);
@@ -87,7 +87,7 @@ body {
 }
 
 .hero-section {
-  padding: 4.8rem 0 9.6rem 0;
+  padding: 18rem 0 9.6rem 0;
   margin: 0 auto;
 
   color: #ffffff20;
@@ -120,7 +120,7 @@ body {
   letter-spacing: -0.5px;
   line-height: 1.15;
   font-weight: 700;
-  font-size: 12rem;
+  font-size: 17rem;
   margin-bottom: 12rem;
   /* background-image: linear-gradient(180deg, #ef914e, #299be0, #b86ca0); */
   background-image: linear-gradient(45deg, #40e0d0, #ff8c00, #ff0080);
@@ -135,6 +135,21 @@ body {
   letter-spacing: 0.6px;
   color: #d1d1d1;
   font-weight: 600;
+  background-image: linear-gradient(
+    to right top,
+    hsla(212, 76%, 5%, 0.196) 0%,
+    hsla(212, 74%, 9%, 0.196) 10%,
+    hsla(213, 73%, 15%, 0.196) 20%,
+    hsla(213, 75%, 23%, 0.196) 30%,
+    hsla(213, 77%, 27%, 0.196) 40%,
+    hsla(213, 77%, 29%, 0.196) 50%,
+    hsla(213, 77%, 30%, 0.196) 60%,
+    hsla(213, 77%, 31%, 0.196) 70%,
+    hsla(213, 76%, 33%, 0.196) 80%,
+    hsla(213, 69%, 40%, 0.2) 90%,
+    hsla(213, 61%, 45%, 0.2) 100%
+  );
+  font-family: "Bebas Neue";
 }
 .hero-img {
   width: 100%;
@@ -220,4 +235,23 @@ special sizing for smaller devices */
 .header {
   height: 5rem;
   background-color: #933333;
+}
+.about-background-image{
+  background-image: url("za webflow.png");
+  
+  padding-top: 20rem;
+  padding-bottom: 20rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: flex-end;
+}
+.about-text-div{
+  padding-left: 86rem;
+  padding-right: 10rem;
+  font-size: 6rem;
+  color: #d1d1d1;
+  font-family: "Teko";
+  
 }
