@@ -29,20 +29,22 @@
       <div class="hero-section">
         <div class="hero">
           <div class="hero-text-box">
-            <h1 class="heading-primary">&nbsp;Design and development</h1>
+            <h1 class="heading-primary">&nbsp;Design and Development</h1>
             <p class="hero-description">
-              To create, is to have inspiration, tools, and will, with which you
-              challenge yourself, to push beyond what you thought is possible
+              <span class="orange">To create</span>, is to have inspiration, tools, and will, with which you
+              challenge yourself, to <span class="blue">push beyond what</span> you thought <span class="blue">is possible</span>
             </p>
-            <a href="#" class="hero-button button-margin-right button-primary"
+            <a href="#" class="hero-button button-margin-right button-primary btn-color"
               >Contact</a
             >
-            <a href="#" class="hero-button button-secondary">About</a>
+            <a href="#" class="hero-button button-secondary btn-color2">About</a>
           </div>
         </div>
       </div>
     </div>
     <main class="content-wrapper">
+      <section class="gradient-section">
+       
       <section class="features-section">
         <div class="features-main-div">
           <h2 class="features-heading">Save time and build cool websites</h2>
@@ -65,59 +67,56 @@
         </div>
         </div>
       </section>
+      
       <section class="form-section">
-        <div class="form-div">
-          <form method="POST">
-<label>Name:
-  <input name="submitted-name" autocomplete="name"/>
-</label>
-<label>Email:
-<input email="submitted-email" autocomplete="email" />
-</label>
-<label>Question
-<input question="question" />
-</label>
+        <div class="form-position-div">
+          <h2 class="form-heading">Contact me here</h2>
+<div class="form-text-div">
+          <form class="form"  action="/my-handling-form-page" method="post">
+            <div class="form-list">
+              <div class="input-div">
+                <label  for="name"></label>
+                <input type="text" id="name" name="user_name" placeholder="Enter your name" />
+              </div>
+              <div class="input-div">
+                <label  for="mail"></label>
+                <input type="email" id="mail" name="user_email" placeholder="Email Address" />
+              </div>
+              <div class="message-field">
+                <textarea id="msg" name="user_message" placeholder="Remember, be nice!"></textarea>
+              </div>
+              <button class="form-btn btn-color"> Send message</button>
+            </div>
           </form>
         </div>
-      </section>
-      <section class="about-section">
-        <div class="about-background-image">
-            <div class="about-text-div">Hey there, my name is Eldar Jahic, and I am the creator of this website. It's made as a place where I can test out my creations, and tinker with different tools. Purpose of it is to expand my own knowledge, and showcase my skills, therefore I try and make everything from scratch, including taking photo of myself and giving it the pixelated matrix look.</div>
         </div>
       </section>
+  
+      <section class="about-section">
+        <img class="portrait2" src="portretPNG2.png">
+        <div class="about-background-image">
+          <div class="portrait"></div>
+            <div class="about-text-div">Hey there, my name is <span class= "orange">Eldar</span>, and I am the creator of this website. It's made as a place where I can test out my creations, and tinker with different tools. Purpose of it is to expand my own knowledge, and showcase my skills, therefore I try and make everything from scratch, including taking photo of myself and giving it the pixelated matrix look.</div>
+        </div>
+      </section>
+    </section>
     </main>
     <footer class="footer">
       <div class="footer-div">
       <div class="logo-col">
        <a class="footer-logo" href="#"><img src="hourglass.svg" class="logo" /></a> 
        <ul class="socials-links">
-         <li><a class="footer-link" href="#">
-           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
+         <li><a class="footer-link" href="https://www.instagram.com/eldarovkin/">
+           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#767676" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
            </a>
          </li>
-         <li><a class="footer-link" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>
+         <li><a class="footer-link" href="https://www.linkedin.com/in/eldar-jahic-b04440200/">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#767676" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>
            </a>
          </li>
       </ul>
       <p class="copyright">
-      Copyright © <span class="year">2024</span>by Eldar Jahic All rights reserved</p>
-      </div>
-      <div class="contact-col">
-        <p class="footer-heading">
-          Contact
-        </p>
-        <p class="footer-email">
-          eldar.jahic.gb@gmail.com
-        </p>
-      </div>
-      <div class="features-col">
-        <p class= "features-text">Features</p>
-      </div>
-      <div class="services">
-        <p class="services-text">
-          Services
-        </p>
+      Copyright © <span class="year">2024</span> by Eldar Jahic <br> All rights reserved</p>
       </div>
       </div>
     </footer>
