@@ -8,7 +8,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto", serif;
 }
 .hero-and-nav {
   display: flex;
@@ -19,7 +19,14 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
+h2{
+  font-family: "playfair display";
+}
+.main-nav{
+  display:none;
+}
 .main-nav-list {
+  
   list-style-type: none;
   display: flex;
   gap: 40px;
@@ -87,7 +94,7 @@ body {
   letter-spacing: 0.6px;
   color: #F5F5F5;
   font-weight: 600;
-  font-family: "Bebas Neue";
+  font-family: "open sans";
 }
 .hero-img {
   width: 100%;
@@ -107,7 +114,7 @@ i takodje implement shadow box koji prati sliku */
   border: none;
   cursor: pointer;
   background-color: #d1d1d1;
-  font-family: "bebas neue";
+  font-family: "roboto";
   letter-spacing: 1px;
 }
 .button-primary {
@@ -219,6 +226,7 @@ opacity: 50%;
   padding: 9.6rem 0;
 }
 .features-grid-div{
+  font-family: Montserrat;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   column-gap: 6.4rem;
@@ -357,9 +365,9 @@ justify-self: stretch;
   max-width: 20%;
   font-weight: 700;
   box-shadow: 0 2.4rem 4.8rem rgba(212, 212, 212, 0.075);
-  background-color: #ad1d1d;
+  background-color: #156436;
   color: #F5F5F5;
-  font-family: "bebas neue";
+  font-family: "roboto";
 }
 /* ///////////////////////////////// */
 .orange{
@@ -425,5 +433,13 @@ justify-self: stretch;
   }
   .about-text-div{
     padding-left: 55rem;
+  }
+  .logo{
+    width: 40px;
+    height: 40px;
+  }
+  .portrait2{
+width: 66%;
+opacity: 25%;
   }
 }
