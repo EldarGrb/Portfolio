@@ -1,3 +1,5 @@
+/* GENERAL */
+
 
 * {
   padding: 0;
@@ -10,6 +12,19 @@ html {
 body {
   font-family: "Roboto", serif;
 }
+h1,h2{
+  font-family: "playfair display";
+}
+h2{
+  margin-bottom: 6.4rem;
+  font-size: 6.4rem;
+}
+
+/* HERO PAGE */
+
+
+
+
 .hero-and-nav {
   display: flex;
   flex-direction: column;
@@ -18,10 +33,7 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
-}
-h2{
-  font-family: "playfair display";
-}
+  }
 .main-nav{
   display:none;
 }
@@ -102,8 +114,6 @@ h2{
   height: auto;
   border-radius: 2px;
 }
-/* ideja za sliku: ubaciti transition gdje se okrene slika za 90 stepeni,
-i takodje implement shadow box koji prati sliku */
 .hero-button {
   text-decoration: none;
   color: #202124;
@@ -116,6 +126,7 @@ i takodje implement shadow box koji prati sliku */
   background-color: #d1d1d1;
   font-family: "roboto";
   letter-spacing: 1px;
+  transition: all 0.3s;
 }
 .button-primary {
   background-color: #ae1c1d;
@@ -126,7 +137,6 @@ i takodje implement shadow box koji prati sliku */
 }
 .button-secondary {
   border-color: #d1d1d1;
-  transition: transform 2.2s;
 }
 .button-secondary:hover {
   background-color: #929292;
@@ -135,6 +145,55 @@ i takodje implement shadow box koji prati sliku */
 .button-margin-right {
   margin-right: 1.6rem;
 }
+
+/* SECOND PART, CARDS */
+
+.features-section{
+  padding: 9.6rem 0;
+}
+.features-main-div{
+  text-align: center;
+}
+.features-grid-div{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  column-gap: 6.4rem;
+  max-width: 175rem;
+  margin: 0 auto;
+  padding: 9.6rem 4rem;
+  color: #f3fbf0;
+  background-color: #40e0d009;
+  border-radius: 20px;
+}
+.features-grid-div svg{
+  fill:#f3fbf0;
+}
+.card-heading{
+  font-size: 2.7rem;
+  margin-bottom: 1.6rem;
+}
+.card-text{
+  font-size: 2.3rem;
+}
+.features-heading{
+  text-align: center;
+  color: #F5F5F5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* .image-div {
@@ -193,7 +252,7 @@ special sizing for smaller devices */
   justify-content: flex-end;
 }
 .about-section{
-  position: relative;;
+  position: relative;
 }
 .portrait{
   /* background-image: url(portretPNG.png);
@@ -222,39 +281,7 @@ opacity: 50%;
   margin-bottom: 11.6rem;
   line-height: 50px;
 }
-.features-section{
-  padding: 9.6rem 0;
-}
-.features-grid-div{
-  font-family: Montserrat;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  column-gap: 6.4rem;
-  max-width: 175rem;
-  margin: 0 auto;
-  padding: 9.6rem 4rem;
-  color: #f3fbf0;
-  background-color: #40e0d009;
-  border-radius: 20px;
-}
-.features-grid-div svg{
-  fill:#f3fbf0;
-}
-.card-heading{
-  font-size: 2.7rem;
-  margin-bottom: 1.6rem;
-}
-.card-text{
-  font-size: 2.3rem;
-}
-.features-heading{
-  padding-left: 3rem;
-  padding-right: 3rem;
-  max-width: 175rem;
-  font-size: 6.4rem;
-  margin: 0 auto 9.6rem auto;
-  color: #F5F5F5;
-}
+
 
 .logo-col{
   display: flex;
@@ -303,8 +330,6 @@ padding: 9.6rem 0;
 }
 
 .form-heading{
-  font-size: 6.4rem;
-  margin-bottom: 2rem;
   color:#F5F5F5;
   text-align: center;
 }
@@ -368,10 +393,14 @@ justify-self: stretch;
   background-color: #156436;
   color: #F5F5F5;
   font-family: "roboto";
+  transition: all 0.3s;
+}
+.form-btn:hover{
+  background-color: #2ea116;
 }
 /* ///////////////////////////////// */
 .orange{
-  color: #E64A19;
+  color: #bdbdbd;
 }
 .blue{
   color:#ae1c1d;
@@ -427,7 +456,7 @@ justify-self: stretch;
   }
 }
 
-@media (max-width:70rem){
+@media (max-width:70rem){  /* 1120 width */
   html{
     font-size: 38%;
   }
@@ -438,8 +467,45 @@ justify-self: stretch;
     width: 40px;
     height: 40px;
   }
+  .svg-fotter{
+    width: 18px;
+    height: 18px;
+  }
   .portrait2{
 width: 66%;
 opacity: 25%;
   }
+  .about-text-div{
+    line-height: 27px;
+  }
+  }
+  
+@media(max-width: 48rem){ /* 768 width */
+  .portrait2{
+    width: 56%;
+  }
+  html{
+    font-size: 20%;
+  }
+  .about-text-div{
+    line-height: 20px;
+  }
+  .features-grid-div{
+    grid-template-rows: repeat(1, 1fr);
+    width: 360px;
+    row-gap: 16px;
+  }
+  .cards-svg{
+    width: 20px;
+    height: 20px;
+  }
+  .card-text{
+    width: 200px;
+    margin:auto;
+  }
+}
+@media(max-width:27rem){ /*430 width */
+.about-text-div{
+
+}
 }
