@@ -253,6 +253,9 @@ special sizing for smaller devices */
 }
 .about-section{
   position: relative;
+  display:flex;
+  justify-content: flex-end;
+  padding: 0 2.4rem;
 }
 .portrait{
   /* background-image: url(portretPNG.png);
@@ -273,13 +276,13 @@ width: 40%;
 opacity: 50%;
 }
 .about-text-div {
-  padding-left: 86rem;
-  padding-right: 15rem;
+  padding-bottom: 10rem;
   font-size: 4rem;
   color: #d1d1d1;
   z-index: 1;
-  margin-bottom: 11.6rem;
   line-height: 50px;
+  width:50%;
+  text-align: center;
 }
 
 

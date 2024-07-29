@@ -1,17 +1,21 @@
-const boxElements = document.getElementsByClassName("box");
-const hiddenElements = document.getElementsByClassName("hidden-div");
 
-for (let i = 0; i < boxElements.length; i++) {
-  const box = boxElements[i];
-  const hidden = hiddenElements[i];
+const form = document.querySelector('.form');
 
-  box.addEventListener("mouseenter", () => {
-    console.log("Mouse entered box:", box);
-    box.style.display = "none";
-    hidden.style.display = "block";
-  });
-  hidden.addEventListener("mouseleave", () => {
-    hidden.style.display = "none";
-    box.style.display = "block";
-  });
-}
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  // Your form handling logic here (see next step)
+  
+const formData = new FormData(form);
+
+fetch(form.action, {
+  method: "POST",
+  body: formData
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+});
