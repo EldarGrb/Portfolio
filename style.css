@@ -281,8 +281,8 @@ opacity: 50%;
   color: #d1d1d1;
   z-index: 1;
   line-height: 50px;
-  width:50%;
   text-align: center;
+  min-width: 400px;
 }
 
 
@@ -355,6 +355,7 @@ justify-self: stretch;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);;
 }
 .form-list label{
+  font-family: roboto;
   display:block;
   font-size: 1.6rem;
 }
@@ -367,15 +368,20 @@ justify-self: stretch;
   min-height: 30rem;
   display: block;
   outline: none;
+  border:none;
   border-radius: 9px;
   background-color: #f3fbf0;
-  font-family: playfair-display;
+  font-family: roboto;
   font-size: 1.8rem;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);;
+}
+input{
+  font-family: roboto;
 }
 .input-div{
   max-width: 30%;
   margin: 1.5rem;
+  
 }
 .input-div label{
   padding-right: 1rem;
@@ -393,13 +399,13 @@ justify-self: stretch;
   max-width: 20%;
   font-weight: 700;
   box-shadow: 0 2.4rem 4.8rem rgba(212, 212, 212, 0.075);
-  background-color: #156436;
+  background-color: #ae1c1d;
   color: #F5F5F5;
-  font-family: "roboto";
+  
   transition: all 0.3s;
 }
 .form-btn:hover{
-  background-color: #2ea116;
+  background-color: #933333;
 }
 /* ///////////////////////////////// */
 .orange{
@@ -507,8 +513,10 @@ opacity: 25%;
     margin:auto;
   }
 }
-@media(max-width:27rem){ /*430 width */
+@media(min-width:108rem){ /*1754 width */
 .about-text-div{
-
+width: 60%;
+z-index: 2;
+padding-right: 5rem;
 }
 }
