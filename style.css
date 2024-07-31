@@ -489,7 +489,7 @@ opacity: 25%;
   }
   }
   
-@media(max-width: 48rem){ /* 768 width */
+@media(max-device-width: 48rem){ /* 768 width */
   .portrait2{
     width: 56%;
   }
