@@ -496,6 +496,9 @@ opacity: 25%;
   .portrait2{
     width: 56%;
   }
+  h1{
+    font-size: 5rem;
+  }
   html{
     font-size: 20%;
   }
@@ -515,11 +518,4 @@ opacity: 25%;
     width: 200px;
     margin:auto;
   }
-}
-@media(min-width:108rem){ /*1754 width */
-.about-text-div{
-width: 60%;
-z-index: 2;
-padding-right: 5rem;
-}
 }
