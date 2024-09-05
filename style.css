@@ -19,7 +19,7 @@ h2 {
   margin-bottom: 6.4rem;
   font-size: 6.4rem;
 }
-h3{
+h3 {
   font-weight: 600;
 }
 
@@ -128,7 +128,6 @@ h3{
   border: none;
   cursor: pointer;
   background-color: #d1d1d1;
-  font-family: "roboto";
   letter-spacing: 1px;
   transition: all 0.3s;
 }
@@ -339,7 +338,6 @@ special sizing for smaller devices */
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 }
 .form-list label {
-  font-family: roboto;
   display: block;
   font-size: 1.6rem;
 }
@@ -355,13 +353,10 @@ special sizing for smaller devices */
   border: none;
   border-radius: 9px;
   background-color: #f3fbf0;
-  font-family: roboto;
   font-size: 1.8rem;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 }
-input {
-  font-family: roboto;
-}
+
 .input-div {
   max-width: 30%;
   margin: 1.5rem;
@@ -475,10 +470,10 @@ input {
   .portrait2 {
     width: 56%;
   }
-  h1{
+  h1 {
     font-size: 5rem;
   }
-  html{
+  html {
     font-size: 20%;
   }
   .about-text-div {

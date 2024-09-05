@@ -12,3 +12,12 @@
       background-size: cover;
   background-attachment: fixed;
   }
+  .form-section{
+    background-color: aqua;
+    margin: 40rem 2rem 2rem 2rem;
+      }
+    .form-div{
+      display:flex;
+      justify-content: center;
+      background-color: aliceblue;
+    }
