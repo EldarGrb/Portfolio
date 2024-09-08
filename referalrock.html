@@ -27,30 +27,54 @@
    </div> 
 </section>
 <script type="text/javascript">
-  window.onload = function() {
-  // Assuming you have a script to handle form submission
-  document.getElementById("referralForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
+ window.onload = function() {
+  console.log("Window loaded");
 
-    // Check if referralJS.conversion is defined
-    if (window.referralJS && window.referralJS.conversion) {
-      // Get form values
-      var firstName = document.getElementById("firstName").value;
-      var email = document.getElementById("email").value;
-      var amount = document.getElementById("amount").value;
+  // Create the script element dynamically to ensure it loads before checking
+  var script = document.createElement("script");
+  script.src = "//ejmainpage4666b.referralrock.com/ReferralSdk/referral.js";
+  script.async = true;
+  
+  script.onload = function() {
+    console.log("Referral script loaded");
 
-      // Set values in referralJS.conversion.parameters
-      window.referralJS.conversion.parameters.firstName = firstName;
-      window.referralJS.conversion.parameters.email = email;
-      window.referralJS.conversion.parameters.amount = amount;
+    var checkInterval = setInterval(function() {
+      if (window.referralJS && window.referralJS.conversion) {
+        clearInterval(checkInterval);
+        console.log("referralJS.conversion is defined");
 
-      // Handle form submission and data processing here
-      console.log(window.referralJS.conversion.parameters); // For testing purposes
-    } else {
-      console.error("window.referralJS.conversion is not defined1");
-    }
-  });
-}
+        document.getElementById("referralForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Get form values
+          var firstName = document.getElementById("firstName").value;
+          var email = document.getElementById("email").value;
+          var amount = document.getElementById("amount").value;
+
+          // Check if conversion parameters are available
+          if (window.referralJS.conversion.parameters) {
+            window.referralJS.conversion.parameters.firstName = firstName;
+            window.referralJS.conversion.parameters.email = email;
+            window.referralJS.conversion.parameters.amount = amount;
+
+            // Handle form submission and data processing here
+            console.log(window.referralJS.conversion.parameters); // For testing purposes
+          } else {
+            console.error("window.referralJS.conversion.parameters is not defined");
+          }
+        });
+      } else {
+        console.error("window.referralJS.conversion is not defined");
+      }
+    }, 100); // Check every 100ms
+  };
+
+  script.onerror = function() {
+    console.error("Failed to load referral script");
+  };
+
+  document.head.appendChild(script); // Append the script to the head
+};
   </script>
   </body>
   </html>
