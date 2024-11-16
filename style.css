@@ -417,79 +417,110 @@ special sizing for smaller devices */
 
 /* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
 
-@media (max-device-width: 110rem) {
-  /* 1760 width */
+@media (max-width: 84em) {
   html {
-    font-size: 58%;
-  }
-  .about-text-div {
-    padding-left: 67rem;
+    font-size: 56.25%; /* 9px */
   }
 }
 
-@media (max-device-width: 90rem) {
-  /*1440 width */
+@media (max-width: 75em) {
   html {
-    font-size: 45%;
+    font-size: 50%; /* 8px */
   }
+  
+  .heading-primary {
+    font-size: 12rem;
+  }
+}
+
+@media (max-width: 59em) {
+  html {
+    font-size: 45%; /* 7.2px */
+  }
+  
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+    text-align: center;
+  }
+  
   .features-grid-div {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  .about-text-div {
-    padding-left: 60rem;
-  }
-}
-
-@media (max-device-width: 70rem) {
-  /* 1120 width */
-  html {
-    font-size: 38%;
-  }
-  .about-text-div {
-    padding-left: 55rem;
-  }
-  .logo {
-    width: 40px;
-    height: 40px;
-  }
-  .svg-fotter {
-    width: 18px;
-    height: 18px;
-  }
-  .portrait2 {
-    width: 66%;
-    opacity: 25%;
-  }
-  .about-text-div {
-    line-height: 27px;
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+    padding: 4.8rem 2rem;
   }
 }
 
-@media (max-device-width: 48rem) {
-  /* 768 width */
-  .portrait2 {
-    width: 56%;
+@media (max-width: 44em) {
+  .heading-primary {
+    font-size: 8rem;
+    margin-bottom: 6rem;
   }
-  h1 {
-    font-size: 5rem;
+  
+  .hero-description {
+    font-size: 3.2rem;
   }
+  
+  .form-text-div {
+    padding: 3.2rem;
+  }
+  
+  .input-div {
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+  
+  .form-list textarea {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  
+  .form-btn {
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 34em) {
   html {
-    font-size: 20%;
+    font-size: 40%;
   }
-  .about-text-div {
-    line-height: 20px;
+  
+  h2 {
+    font-size: 4.8rem;
+    margin-bottom: 4.8rem;
   }
+  
+  .hero-section {
+    padding: 9.6rem 0 4.8rem 0;
+  }
+  
   .features-grid-div {
-    grid-template-rows: repeat(1, 1fr);
-    width: 360px;
-    row-gap: 16px;
+    max-width: 100%;
   }
-  .cards-svg {
-    width: 20px;
-    height: 20px;
+  
+  .portrait2 {
+    width: 100%;
+    opacity: 0.2;
   }
-  .card-text {
-    width: 200px;
-    margin: auto;
+  
+  .about-text-div {
+    padding: 4rem 2rem;
+    font-size: 3.2rem;
+    line-height: 1.6;
+    min-width: auto;
+  }
+}
+
+/* Add iOS-specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .hero-and-nav {
+    background-attachment: scroll;
+  }
+  
+  input,
+  textarea {
+    -webkit-appearance: none;
+    border-radius: 9px;
   }
 }
