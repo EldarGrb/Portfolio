@@ -10,7 +10,6 @@
     font-family: lato, open sans;
     background-image: linear-gradient(0deg, #0e0f0f, #181c1b);
       background-size: cover;
-  background-attachment: fixed;
   }
   .form-section{
     background-color: aqua;

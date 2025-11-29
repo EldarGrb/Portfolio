@@ -1,21 +1,16 @@
-
-const form = document.querySelector('.form');
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  // Your form handling logic here (see next step)
-  
-const formData = new FormData(form);
-
-fetch(form.action, {
-  method: "POST",
-  body: formData
-})
-.then(response => response.json())
-.then(data => {
-  console.log('Success:', data);
-})
-.catch(error => {
-  console.error('Error:', error);
-});
+// Smooth scrolling only - No parallax effect
+document.addEventListener('DOMContentLoaded', function() {
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
 });
