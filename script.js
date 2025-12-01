@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    const endpoint = 'https://oxebprwofnrplnxxpaxr.supabase.co/functions/v1/porfolio-email-form';
+    const endpoint = 'https://worker-proud-breeze-0b51.eldar-jahic-gb.workers.dev/';
 
     try {
       const response = await fetch(endpoint, {
