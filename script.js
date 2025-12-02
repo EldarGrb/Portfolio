@@ -24,6 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
   contactButtons.forEach(button => {
     button.addEventListener('click', function(e) {
       e.preventDefault();
+      
+      // Reset modal state: show form, hide/remove any previous success message
+      if (contactForm) {
+        contactForm.style.display = 'flex';
+      }
+      const existingSuccess = document.querySelector('.contact-success-message');
+      if (existingSuccess) {
+        existingSuccess.remove();
+      }
+
       modal.classList.add('show');
       document.body.style.overflow = 'hidden'; // Prevent background scrolling
     });
@@ -81,13 +91,29 @@ document.addEventListener('DOMContentLoaded', function() {
         throw new Error('Network response was not ok');
       }
 
-      // Optionally read response JSON/text if your function returns something
-      // const data = await response.json();
-
-      alert('Thank you for your message! I\'ll get back to you soon.');
+      // Reset form fields
       contactForm.reset();
-      modal.classList.remove('show');
-      document.body.style.overflow = ''; // Restore scrolling
+
+      // Hide the form and show an in-modal success message instead of alert
+      contactForm.style.display = 'none';
+
+      let successMessage = document.querySelector('.contact-success-message');
+      if (!successMessage) {
+        successMessage = document.createElement('p');
+        successMessage.className = 'contact-success-message';
+        successMessage.textContent = 'Thank you for the message, I will get back to you!';
+
+        // Insert after the modal title if possible, otherwise append to modal content
+        const modalContent = modal.querySelector('.modal-content');
+        const modalTitle = modal.querySelector('.modal-title');
+        if (modalTitle && modalTitle.parentNode) {
+          modalTitle.parentNode.insertBefore(successMessage, modalTitle.nextSibling);
+        } else if (modalContent) {
+          modalContent.appendChild(successMessage);
+        }
+      }
+
+      successMessage.style.display = 'block';
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('Something went wrong sending your message. Please try again in a moment.');

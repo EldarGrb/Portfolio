@@ -627,6 +627,13 @@ body {
   min-width: 20rem;
 }
 
+.contact-success-message {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: #a5f3fc;
+  text-align: center;
+}
+
 /* Responsive Modal */
 @media (max-width: 768px) {
   .modal-content {
