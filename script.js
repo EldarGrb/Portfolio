@@ -1,5 +1,5 @@
 // Smooth scrolling only - No parallax effect
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Smooth scrolling for anchor links (excluding contact buttons)
   document.querySelectorAll('a[href^="#"]:not(.contact-btn)').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -14,6 +14,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Intersection Observer for fade-in animations
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      } else {
+        entry.target.classList.remove('is-visible'); // Reset animation when out of view
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.fade-in-section').forEach(section => {
+    observer.observe(section);
+  });
+
   // Modal functionality
   const modal = document.getElementById('contactModal');
   const contactButtons = document.querySelectorAll('.contact-btn');
@@ -22,9 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Open modal when clicking contact buttons
   contactButtons.forEach(button => {
-    button.addEventListener('click', function(e) {
+    button.addEventListener('click', function (e) {
       e.preventDefault();
-      
+
       // Reset modal state: show form, hide/remove any previous success message
       if (contactForm) {
         contactForm.style.display = 'flex';
@@ -40,13 +61,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Close modal when clicking close button
-  closeButton.addEventListener('click', function() {
+  closeButton.addEventListener('click', function () {
     modal.classList.remove('show');
     document.body.style.overflow = ''; // Restore scrolling
   });
 
   // Close modal when clicking outside the modal content
-  modal.addEventListener('click', function(e) {
+  modal.addEventListener('click', function (e) {
     if (e.target === modal) {
       modal.classList.remove('show');
       document.body.style.overflow = ''; // Restore scrolling
@@ -54,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Close modal with Escape key
-  document.addEventListener('keydown', function(e) {
+  document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && modal.classList.contains('show')) {
       modal.classList.remove('show');
       document.body.style.overflow = ''; // Restore scrolling
@@ -62,9 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Handle form submission
-  contactForm.addEventListener('submit', async function(e) {
+  contactForm.addEventListener('submit', async function (e) {
     e.preventDefault();
-    
+
     // Get form values
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
