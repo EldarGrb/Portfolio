@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
+    const phone = document.getElementById('phone').value.trim();
 
     // Basic front-end validation safeguard
     if (!name || !email || !message) {
@@ -105,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, email, message })
+        body: JSON.stringify({ name, email, message, phone })
       });
 
       if (!response.ok) {
