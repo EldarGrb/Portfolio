@@ -643,7 +643,7 @@ img.logo {
 .contact-success-message {
   margin-top: 2rem;
   font-size: 1.6rem;
-  color: var(--accent-primary);
+  color: var(--text-main);
   text-align: center;
 }
 
